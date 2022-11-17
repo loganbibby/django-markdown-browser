@@ -1,0 +1,11 @@
+
+    <div class="row mb-0">
+        <div class="col-6">
+            {{ filename }}
+        </div>
+        <div class="col-6 text-end">
+            {% if request.resolver_match.view_name != 'docs:index' %}<a href="{% url 'docs:index' %}">Back to README</a>{% endif %}
+        </div>
+    </div>
+
+    {{ contents }}
